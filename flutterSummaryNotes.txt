@@ -113,6 +113,7 @@ andoroid/app/rsc/main/res folder keep our app icons.
 }
 
 303
+use high order functions
 List.map.fold for total of all list values. difference usage{1:31;04 video 13
 List<double> exaList =
       List.generate(10, (index) => index.toDouble()).toList();
@@ -124,7 +125,30 @@ List<double> exaList =
 }
 test folder usage
 Generics{
-that is unknown references.
+that is unknown references or constrians type.
+THE BEST EXAMPLE TO UNDERSTAND
+----
+void main(List<String> args) {
+  void sayName<T extends AdminUser>(T data) {
+    print("my name is ${data.name}");
+  }
+
+  // sayName(User("semih"));
+  sayName(AdminUser("Semih"));
+}
+
+class User {
+  final String? name;
+  User(this.name);
+}
+
+class AdminUser {
+  final String? name;
+  AdminUser(this.name);
+}
+sayName functions doens't accept the User class.
+-----
+
 }
 
 
