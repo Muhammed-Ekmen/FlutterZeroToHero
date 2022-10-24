@@ -1,1 +1,131 @@
-helloi
+********************************101
+
+2ND VIDEO
+
+Typography
+TextMaxLine
+Custom Theme Usage
+Never use ! operator. use the ?? operator instead of it.
+floatingActionButton location
+Custom Font Usage (download)
+BottomSheet Usage
+------------
+3rd adn 4th VIDEO 
+
+button size with sizedBox
+keep all size values in any dart file.
+appBar transparan,elevation property and systemOverLayStyle(operation System staus bar
+hotReload adn hotRestart difference
+padding values in other dart file.
+------------
+5th adn 6th VIDEO
+
+Spacer Usage with expanded
+stack usage according to responsive design
+CustomScrool view
+life cycles
+textFormField with animetedContainer
+pageview with scaffolds
+keyboard apperances
+TextInputForms
+------------
+7th VIDEO
+
+debug Usage (inspect)
+textScaleFactor and FittedBox
+Constrains listView with SizedBox
+shrinkWrap with listView
+appbar padding for floatig seem
+late usage(data will come after run constructor)
+
+
+********************************202
+8th VIDEO
+
+"/$" usage for dollar symbol
+the best tabbar usage (keep 8)
+enum and extension usage
+
+9th VIDEO
+
+you cannot reach database directly.
+what is the service
+CRUD with postman
+create modelClass
+dio usage with baseURL
+textInputAction
+http Status Code
+Querry parameter usage
+
+10th video
+
+package examine. go to source code and search the "channel". if there is it, this package using native plugins. So you gotta set up some plugins
+CanLaunch usage with _urlLauncher
+separeted the appColors for light or dark theme
+Circular corner appBar (youtuibe plant app)
+widget size with enum
+textFormField obsecure text character
+
+11th
+image usage with enum
+SizedBox.shrink usage
+Animatedopacity
+AnimatedIcon 
+create own exception
+animatedPositioned
+implemantation usage
+extend usage
+mixin usage
+extension usage
+stateManagement viewModelView(keep 11 last fields)
+key types(we using the keys for reach the related widget and its properties)
+dropDownButtonFormField
+
+12th
+Caching (all datas saves to 2 types. These're database and local)
+sharedPrefences usage
+initState cannot include async process unlike the extract the method
+flutter secure storage keep values even if app delete from device 
+jsonEncode and jsonDecode usage (we gonna use compute instead of them, encode and decode use too much ram)
+json web token
+textFormField enlarge andwith maxline minline
+
+13th
+
+Sheets Usage{
+BottomSheets=choosing,filtering etc.
+alertDialog=exit,yes/no questions
+snackBar=notification for user
+}
+Xcode describes{
+podFile keeps your donwloaded packages of native
+in the runner file, you can set up device orientation vertical situations etc
+in the ios folder,when click the runner.xcworkspace will open the xcode youp project
+bundleIdentifer is your unique key your app.
+NOTE: set up your app device orientitation on xcode. So you don't need to call any method from flutter project, and app will be more performance
+in the xCode runner/info that is your permissions. for exa add camera permissins. video13 1:16:30
+appDelegate is your native ios projects start field.
+}
+androidStudio describes{
+Android/app/strc/main/androidManifest keep your android permissions.
+android project start in android/app/rsc.main/kotlin/mainActivity. similar to appDelegate
+andoroid/app/rsc/main/res folder keep our app icons.
+}
+
+303
+List.map.fold for total of all list values. difference usage{1:31;04 video 13
+List<double> exaList =
+      List.generate(10, (index) => index.toDouble()).toList();
+  // int total = exaList
+  // .map((e) => e.toInt())
+  // .fold(0, (previousValue, element) => previousValue + element);
+  int total = exaList.fold(
+      0, (previousValue, element) => previousValue + element.toInt());
+}
+test folder usage
+Generics{
+that is unknown references.
+}
+
+
+
