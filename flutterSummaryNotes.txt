@@ -178,3 +178,9 @@ you can use callBack function and retunr any value to UI
  So, from her eon, your page always keep current state and it won't resend new response
  
  }
+ 
+ *RESPONSIVE DESING TIPS ON ZEPLIN , think about your servilet app. you gotta think about the small or large device orientations. Normally,you have a 3 card on your servicePoint Card,isn't it? Probably, you made these accodring to responseive design . Perfect. but if your app run on very small device, that 3 card show good I mean these are no any layout problem. but these will be very small. That is problem. in this time, you shoudl think like these cards must be only 2 . becasuse screen is very small. Conclusion, you always think about the device screen. NO layout problem is not everythink. you should think about beautiful and proper seem.
+ 
+ 15th VIDEO
+ 
+ 
