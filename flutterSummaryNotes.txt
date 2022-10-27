@@ -170,5 +170,4 @@ you can use callBack function and retunr any value to UI
  * FutureBuilder Usage
  * PlaceHolder Usage
  
- * state keep. on FutureBuilder. For example, think about the FutureBuilde with tabbar. there're 2 tabs on the tabbar .
-
+ * state keep. on FutureBuilder. For example, think about the FutureBuilde with tabbar. there're 2 tabs on the tabbar. these are incluide futureBuilder and any text. when you tour the these tabs every time FutureBuilder send response to endPoint. that is ver y important performance problam. AutomaticKeepAliveClientMixin
