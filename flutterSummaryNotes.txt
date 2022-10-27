@@ -151,5 +151,24 @@ sayName functions doens't accept the User class.
 
 }
 
+14th VIDEO
 
+*part-partOf{
+    that is comminication structure from one private file to other private file, but it is't necessary be priveate file. 
+     appbar example from veliBacik: part should be in your view class,part-of that is appBar should be in your custom appBar class.
+  part '../Templates/custom_partappbar.dart';
+  part of '../view/part_example.dart';
+      NOTE: when you use the part of property in any class, that class will take all imports from file that keep part property. I mean, in the CustomAppBar class, we don't need to import material package is becasuse it already becomes from UI class.
+ }
+
+*atomic Design with button and callBack function{
+you can use callBack function and retunr any value to UI
+}
+
+*VoidCallback usage instead of void Function (){}
+
+ * FutureBuilder Usage
+ * PlaceHolder Usage
+ 
+ * state keep. on FutureBuilder. For example, think about the FutureBuilde with tabbar. there're 2 tabs on the tabbar .
 
