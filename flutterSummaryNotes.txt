@@ -170,4 +170,11 @@ you can use callBack function and retunr any value to UI
  * FutureBuilder Usage
  * PlaceHolder Usage
  
- * state keep. on FutureBuilder. For example, think about the FutureBuilde with tabbar. there're 2 tabs on the tabbar. these are incluide futureBuilder and any text. when you tour the these tabs every time FutureBuilder send response to endPoint. that is ver y important performance problam. AutomaticKeepAliveClientMixin
+ * state keep. on FutureBuilder. For example, think about the FutureBuilde with tabbar. there're 2 tabs on the tabbar. these are incluide futureBuilder and any text. when you tour the these tabs every time FutureBuilder send response to endPoint. that is ver y important performance problam. AutomaticKeepAliveClientMixin. how can You Use It?{
+ "with" use with your class. after that, embed the super.build(context); in your class bild method. (setState's build method) and override the  AutomaticKeepAliveClientMixin's properties. So, you must have code lines like that(
+ @override
+ bool get wantKeepAlive =>true;
+ )
+ So, from her eon, your page always keep current state and it won't resend new response
+ 
+ }
