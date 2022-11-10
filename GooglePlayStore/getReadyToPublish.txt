@@ -62,10 +62,47 @@ at the above code line, we have done manually,
 ** now create the key.properties file under the android folder. fill the inside with instructions. when you copied the tutorial website you will encounter the storeFile=
 
 it expects key.jks file from you. we have already created that file previous steps. Find it and copy.After that create a folder like name is store. Finally paste it inside the store folder.
-now, we can enter the key.jks path from store to storeFile.....
+now, we can enter the key.jks path from store to storeFile like this:
+storeFile=../store/key.jks
 
 ** from here on follow the tutorials from website 
 NOTE:you can open external terminal with command+shift+p
+NOTE 2: Never lost the that .jks file. if you lost your .jks file, you never reach your project.
+
+
+--CREATE KEY WITH TERMINAL EASY VERSION
+NOTE: in the android manifest.xml file, there is 
+<application>
+	android:label="bla bla bla"
+
+</application>
+
+that android:label string value is your seem of app name on the google play store. and your device.
+
+
+
+** now, before the open android studio , you can use only terminal for creating key. go to website copy the key and paste the terminal. that's all.
+you can set up the allies name and other version information. For Instance: 
+
+flutter build appBundle version set up.
+ 
+** Other important thing is icon detect. we can use a package to set up icon
+package is : https://pub.dev/packages/flutter_launcher_icons
+and package usage pub spec.yaml example at : 
+https://github.com/VB10/flightflutter/blob/master/pubspec.yaml
+
+NOTE: we gonna use buildrunner with this package. 
+
+finally, when we wanna use the that package, we're writing the that code line on terminal:
+flutter pub run flutter_launcher_icons:main
+
+NOTE(VERY IMPORTANT!!!!): you can save your command lines on the .sh file. when you need this command lines, you will only call file name and press enter.
+
+.sh USAGE Look at the ZeroToHero
+
+** Final Time. enter the terminal that code line: flutter build appbundle
+
+from here google play store console processing.
 
 
 
