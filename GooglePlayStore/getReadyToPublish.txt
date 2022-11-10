@@ -1,0 +1,73 @@
+ONLY PREPAERA THE APP TO PUBLISHING
+
+Note: https://docs.flutter.dev/deployment/android
+check this link, you can revise the all steps.
+
+Note 2: in the native side for Flutter,there is already splash screen. So, you don't have to create splash screen and fill it. if you use the native side, your projects will be more professional. Normally, when you create the splash screen in the lib folder, all projects begins on native side splash screen, after that it goes to your created splash screen where it keeps lib folder.
+
+Note 3: to edit your splash screen with native side, the theater suggested the use the androidStudio or Xcode.So, for the android side, open the project in AndroidStudio.
+
+1- Edit your Splash Screen in the AndroidStudio
+
+**We assume the you're in the AndroidStudio, Go to the android/app/res folder. you must encounter the drawable folder. that keeps your splash screen properties in itself.
+go to the launch_background.xml file.
+
+** when you follow the tutorial, you will see white rectangle page. that is your splash screen. click the one of the 3 square at the right above field to see code lines. from here on, you will need to native code information.
+Check the That code lines;
+
+https://github.com/VB10/flightflutter/tree/master/android/app/src/main/res/drawable
+===================
+Start the Prepare the App
+now, we gonna follow the first link that I have given you.(First Note).
+
+2-CREATE A KEY (HARD VERSION MANBUELLY, EASIER VERSION)
+
+**Basically, The key is singed on your project unique tool. you can update your project , change any structure with that key. if you lost the key, related project will Useless. In this reason,Developer keeps that key in project/git folder or any folder. But the developer shouldn't share that key to anyone. 
+
+** when you in the androidStudio, there are many section at the tabbar. go to the build section, you will see the 2 important sections more. These are build Bundle(s)/APK(s) and Generate Signed Bundle APK.
+
+First Section (build Bundle(s)/APK(s)) is you know already. That is flutter build APK etc. But other one is more effective. and the you click it, there will be 2 choice APK or App Bundle.
+
+Difference between them :
+     -AppBundle doesn't initialize in the device at once. For instance: there is a game, and that age has 20 levels. AppBundle(AAB) initialize only 1 or 2 levels, when you progress the game, AAB will initialize rest of levels. SO, it's more healtly and performance than APK.
+    - AppBundle is Open Source.
+    - AppBundle is more small size than APK(Android Application Package)
+
+Summary Of Differences:
+    - AppBundle is Publishing Format. But APK is packaging format. These are not in the same field,Look at the below Scheme:
+
+
+
+Developer--->AAB--->GooglePlayStore--->APK->user
+                                   \_____>APK->user
+
+so, applications will more optimized and small size.
+
+
+** let's continue, click the Android App Bundle ratio, and click next button. From here on, we gonna talk about some important fields.
+let's start
+
+-key store path: if you have already key , you can enter the key path, if you don't have create new....
+if you press the create new, you should determine the key store path.
+
+key allies: commonplace name to your certificates. Also, key Allies has own password.
+build variants: there are 3 variants. These're debug, profile and release. 
+release is get ready to publishing to GooglePlayStore so we gonna use the release build type.
+
+NOTE: from here on same as the code line from first note link. 
+  keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+
+at the above code line, we have done manually,
+
+** now create the key.properties file under the android folder. fill the inside with instructions. when you copied the tutorial website you will encounter the storeFile=
+
+it expects key.jks file from you. we have already created that file previous steps. Find it and copy.After that create a folder like name is store. Finally paste it inside the store folder.
+now, we can enter the key.jks path from store to storeFile.....
+
+** from here on follow the tutorials from website 
+NOTE:you can open external terminal with command+shift+p
+
+
+
+
+

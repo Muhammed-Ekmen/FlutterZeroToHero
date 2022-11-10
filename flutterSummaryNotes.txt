@@ -146,7 +146,7 @@ class AdminUser {
   final String? name;
   AdminUser(this.name);
 }
-sayName functions doens't accept the User class.
+sayName functions doesn't accept the User class.
 -----
 
 }
@@ -187,5 +187,7 @@ you can use callBack function and retunr any value to UI
 ** MaterialApp title is text which when the app in the task manager, hambugerger menu on the device.
 ** in the flutter root folder, there is a readMe.md file. you can take notes in there.
 ** you can use the appBundle instead of the apk building. appBundle has many advantages according to Apk.
+
+
  
  
