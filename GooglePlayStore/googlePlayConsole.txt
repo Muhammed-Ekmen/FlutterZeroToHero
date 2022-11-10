@@ -1,1 +1,29 @@
+Publish the App on GooglePlayConsole
 
+first of all, when you enter the google play console you will see the some done icon at the left side drawer. So, we have to check all off the these section. 
+
+I mean, start one of these sections.
+
+the most important section is:app releases section
+
+** app release section:
+
+-internal test: when the app  publishing with this, your app only valid of   certain people. you share link to these people with email.
+
+-beta (Open Track):app on the store but again certain people reach the app. you can think like that is test flight.
+
+-production(Production Track): Actually,it's release mode.
+
+
+now you can reach your appbundle output and drag the google play store console on browser.
+
+appbundle path is:
+
+build/app/outputs/release/app-release.aab
+
+NOTE: when you publish the app, you will encounter the release name. Actually you can set up these information when the appBundle create time.
+The command line :
+flutter build appbundle --versionName
+
+
+48 52
