@@ -3,7 +3,7 @@ ONLY PREPAERA THE APP TO PUBLISHING
 Note: https://docs.flutter.dev/deployment/android
 check this link, you can revise the all steps.
 
-Note 2: in the native side for Flutter,there is already splash screen. So, you don't have to create splash screen and fill it. if you use the native side, your projects will be more professional. Normally, when you create the splash screen in the lib folder, all projects begins on native side splash screen, after that it goes to your created splash screen where it keeps lib folder.
+Note 2: in the native side for Flutter, there is already splash screen. So, you don't have to create splash screen and fill it. if you use the native side, your projects will be more professional. Normally, when you create the splash screen in the lib folder, all projects begins on native side splash screen, after that it goes to your created splash screen where it keeps lib folder.
 
 Note 3: to edit your splash screen with native side, the theater suggested the use the androidStudio or Xcode.So, for the android side, open the project in AndroidStudio.
 
@@ -67,7 +67,7 @@ storeFile=../store/key.jks
 
 ** from here on follow the tutorials from website 
 NOTE:you can open external terminal with command+shift+p
-NOTE 2: Never lost the that .jks file. if you lost your .jks file, you never reach your project.
+NOTE 5: Never lost the that .jks file. if you lost your .jks file, you never reach your project.
 
 
 --CREATE KEY WITH TERMINAL EASY VERSION
@@ -103,7 +103,6 @@ NOTE(VERY IMPORTANT!!!!): you can save your command lines on the .sh file. when 
 ** Final Time. enter the terminal that code line: flutter build appbundle
 
 from here google play store console processing.
-
 
 
 
