@@ -1,0 +1,70 @@
+PUBSPECYAML File Examine
+
+
+-------------------------------------
+#DEFAULT PUBSPEC.YAML FILE
+
+
+# General Section (Metadata)
+name: fantastic_app
+description: A fantastic app that does amazing things!
+version: 1.0.0+1
+
+# Environment
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+# Dependencies
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_bloc: ^6.0.6
+  dio: ^3.0.10
+  cupertino_icons: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# Flutter specific configurations
+flutter:
+  uses-material-design: true
+-------------------------------------
+
+in this example, there are a few sections. So, we will understand easily 
+
+1- General Section or Metadata
+
+** name 
+
+that is our project's package name.You can see when any package import the project.
+import 'package:fantastic_app/main.dart';
+that fantastic_app comes from pub spec.yaml name.
+
+** description
+
+that field sits optional. that description will appear on the package publish like pub.dev. For example, shared_preferences package. there is a description field comes from here.
+
+** version
+
+version: 1.2.3 + 4
+
+1.2.3 is version of your project.
+4 is build version.
+
+----
+
+X.Y.Z+W
+
+X.Y.Z is your project name, you don't have to change that name,
+W is your project code.
+
+
+NOTE:"flutter pub outdated" code line;
+
+Note: when you update the app that already exist in the Store, you gotta change the version code.
+
+**  
+
+
