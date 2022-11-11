@@ -23,7 +23,8 @@ build/app/outputs/release/app-release.aab
 
 NOTE: when you publish the app, you will encounter the release name. Actually you can set up these information when the appBundle create time.
 The command line :
-flutter build appbundle --versionName
 
+flutter build appbundle --build-name 0.0.1 --build-number: 1
 
-48 52
+last of all, you need to click: start roll-out to production button
+
