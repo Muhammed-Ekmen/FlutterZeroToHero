@@ -183,6 +183,36 @@ you can use callBack function and retunr any value to UI
  
  15th VIDEO
  
+** advandec postman usage Go to this link and just revise and check:
+https://www.youtube.com/watch?v=oCEDjp3XMco
+
+** base service view structure.
+regrest_source folder (it's screen base folder)
+      - model (you will kepp your api data models)
+      - service (you will keep CRUD operations in here)
+      - viewModel (your view controller. actually, we use getXController instead of this.)
+      - view (your screen view)
+you gotta go this repo and deeply examine each code line:
+https://github.com/VB10/Flutter-Full-Learn/tree/main/lib/303/reqrest_resource
+I need to explain one by one all file content._(*))(&&(
+
+In conclusion, in the statefulWidgets second class extends our viewModel.
+
+** you shouldn't create more than one htpp or dio object or whatever use. Go to this link:
+https://github.com/VB10/Flutter-Full-Learn/blob/main/lib/product/service/project_dio.dart
+
+** NEVER USE any logic method in view file. if the code doesnot seem on the screen, don't use in view file.
+
+**The teacher only has created dio object int here. AFter hat, he has called this object from here.
+** use the extension for String,Int statfull structures. I mean, there is no problem to use with flutter ready structure.For Instance:
+https://github.com/VB10/Flutter-Full-Learn/blob/main/lib/product/extension/string_extension.dart
+
+in this link, the teacher has added new prooperty to String class.From here on, if you wanna use the any string variable, you will be able to reach the colorValue. Be carefull the teacher has extended String with nullable property. So, we will be able to use for nullable string values like String? name. Now,name variable use the this property.
+
+** the teacher said that when you wanna create model file, if all values from postman body are not necessery , you can copy only data or necessary fields.
+** if you use the stateManagement from outside,you don't have to use viewModel. Provider,Riverpod or Getx does instead of viewModel.
+
+ 
  NOTES:
 ** MaterialApp title is text which when the app in the task manager, hambugerger menu on the device.
 ** in the flutter root folder, there is a readMe.md file. you can take notes in there.
