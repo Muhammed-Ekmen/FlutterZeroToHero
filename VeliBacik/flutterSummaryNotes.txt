@@ -193,27 +193,50 @@ regrest_source folder (it's screen base folder)
       - viewModel (your view controller. actually, we use getXController instead of this.)
       - view (your screen view)
 you gotta go this repo and deeply examine each code line:
+
 https://github.com/VB10/Flutter-Full-Learn/tree/main/lib/303/reqrest_resource
-I need to explain one by one all file content._(*))(&&(
+
+I need to explain one by one all file content.
+VIEW: https://github.com/VB10/Flutter-Full-Learn/blob/main/lib/303/reqrest_resource/viewModel/req_res_view_model.dart
+
+
 
 In conclusion, in the statefulWidgets second class extends our viewModel.
 
 ** you shouldn't create more than one htpp or dio object or whatever use. Go to this link:
 https://github.com/VB10/Flutter-Full-Learn/blob/main/lib/product/service/project_dio.dart
 
-** NEVER USE any logic method in view file. if the code doesnot seem on the screen, don't use in view file.
+** NEVER USE any logic method in view file. if the code does not seem on the screen, don't use in view file.
 
-**The teacher only has created dio object int here. AFter hat, he has called this object from here.
-** use the extension for String,Int statfull structures. I mean, there is no problem to use with flutter ready structure.For Instance:
+**The teacher only has created DIO object int here. After hat, he has called this object from here.
+** use the extension for String,Int stateful structures. I mean, there is no problem to use with flutter ready structure.For Instance:
 https://github.com/VB10/Flutter-Full-Learn/blob/main/lib/product/extension/string_extension.dart
 
-in this link, the teacher has added new prooperty to String class.From here on, if you wanna use the any string variable, you will be able to reach the colorValue. Be carefull the teacher has extended String with nullable property. So, we will be able to use for nullable string values like String? name. Now,name variable use the this property.
+in this link, the teacher has added new property to String class.From here on, if you wanna use the any string variable, you will be able to reach the colorValue. Be carefully the teacher has extended String with nullable property. So, we will be able to use for nullable string values like String? name. Now, name variable use the this property.
 
 ** the teacher said that when you wanna create model file, if all values from postman body are not necessery , you can copy only data or necessary fields.
-** if you use the stateManagement from outside,you don't have to use viewModel. Provider,Riverpod or Getx does instead of viewModel.
+
+** if you use the stateManagement from outside, you don't have to use viewModel. Provider,Riverpod or Getx does instead of 
+viewModel.
+
+** create an project and use the provider in state management folder.
+** jsonSerializeble,build_runner and json_annocation usage. THESE ARE SO IMPORTANT. SEARCH ON THE INTERNET
+jsonSerializable: it has createToJson property. it prevents the create toJson method.
+
+@JsonSerializable(createToJson: false)
+
+jsonSerializable: other property is filedRename. sometimes api keys are not case sensitive. I mean, you expect value like naemVeli but it would come like name_veli. that's situation, we can use this property.
+
+@JsonSerializable(fieldRename:  FieldRename.... etc)
+
+
+** equatable
+
+
 
  
  NOTES:
+** create Global folder for general datas. don't use General.
 ** MaterialApp title is text which when the app in the task manager, hambugerger menu on the device.
 ** in the flutter root folder, there is a readMe.md file. you can take notes in there.
 ** you can use the appBundle instead of the apk building. appBundle has many advantages according to Apk.
