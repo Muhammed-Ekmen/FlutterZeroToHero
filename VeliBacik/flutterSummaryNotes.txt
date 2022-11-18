@@ -235,11 +235,35 @@ jsonSerializable: other property is filedRename. sometimes api keys are not case
 
 
 ** equatable
+NOTE: if you wanna use the equatable, you have to add final tag all class variables. Because of it only work with immutable objects.
+NOTE: when you add equatable to class, it expects to you import get props=> [] properties. So, what is it mean? it says that I  will check values
+but which values should I control is it same? In short, it compares 2 or more object.
+https://www.youtube.com/watch?v=rj8gY-nSfd8 PERFECT SUMMARY. But the most important thing is why we need to use that? think about it, when you generate object from model classic there are 2 same object, app will create 2 same object and it will become performance problem.
+NOTE: all objects has unique hash code. that is similar to ID number. at the above link, it has deeply mentioned.
 
 
 
+
+16th VIDEO
+
+** Lottie Usage:
+
+the teacher said that there are 2 usage of lottie. These are local or network. it's similar to Image.asset or Image.network. The teacher again said that if you required is a few , you should keep in local.
+
+you should keep local lotties under the assets/lottie folder. DONOT forget to add pubspec.yaml file assets.
+
+NOTE:your local lotties comes with json format. I mean, loading_lottie.json
+
+you can use lottie instead button. The link at the below. it's very simple lottie usage to button. You can think about image and Inkwell.
+but you have to create an animation controller to lotto situation.
+https://github.com/VB10/Flutter-Full-Learn/blob/main/lib/303/lottie_learn.dart
+
+** Future.microtask usage.
+
+25 48
  
  NOTES:
+** keep your base url image path with extension and enum classes.{https://github.com/VB10/Flutter-Full-Learn/blob/main/lib/product/constant/lottie_items.dart}
 ** static values, you can keep static_values file under the static folder.
 ** best practice api usage{https://www.youtube.com/watch?v=04j8jTJ7j8Q}
 ** you can keep query parameters query_param file under the a network folder.
