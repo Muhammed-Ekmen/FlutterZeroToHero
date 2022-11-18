@@ -154,7 +154,7 @@ sayName functions doesn't accept the User class.
 14th VIDEO
 
 *part-partOf{
-    that is comminication structure from one private file to other private file, but it is't necessary be priveate file. 
+    that is communication structure from one private file to other private file, but it is't necessary be private file. 
      appbar example from veliBacik: part should be in your view class,part-of that is appBar should be in your custom appBar class.
   part '../Templates/custom_partappbar.dart';
   part of '../view/part_example.dart';
@@ -167,15 +167,15 @@ you can use callBack function and retunr any value to UI
 
 *VoidCallback usage instead of void Function (){}
 
- * FutureBuilder Usage
+ * FutureBuilder Usage. is it really necessary to use when we already using state management approach.
  * PlaceHolder Usage
  
- * state keep. on FutureBuilder. For example, think about the FutureBuilde with tabbar. there're 2 tabs on the tabbar. these are incluide futureBuilder and any text. when you tour the these tabs every time FutureBuilder send response to endPoint. that is ver y important performance problam. AutomaticKeepAliveClientMixin. how can You Use It?{
- "with" use with your class. after that, embed the super.build(context); in your class bild method. (setState's build method) and override the  AutomaticKeepAliveClientMixin's properties. So, you must have code lines like that(
+ * state keep. on FutureBuilder. For example, think about the FutureBuilder with tabbar. there're 2 tabs on the tabbar. these are incluide futureBuilder and any text. when you tour the these tabs every time FutureBuilder send response to endPoint. that is very important performance problam. AutomaticKeepAliveClientMixin. how can You Use It?{
+ "with" use with your class. after that, embed the super.build(context); in your class build method. (setState's build method) and override the  AutomaticKeepAliveClientMixin's properties. So, you must have code lines like that(
  @override
  bool get wantKeepAlive =>true;
  )
- So, from her eon, your page always keep current state and it won't resend new response
+ So, from here on, your page always keep current state and it won't resend new response
  
  }
  
@@ -183,11 +183,11 @@ you can use callBack function and retunr any value to UI
  
  15th VIDEO
  
-** advandec postman usage Go to this link and just revise and check:
+** advanced postman usage Go to this link and just revise and check:
 https://www.youtube.com/watch?v=oCEDjp3XMco
 
 ** base service view structure.
-regrest_source folder (it's screen base folder)
+regrest_source folder (it's screen base*(name) folder)
       - model (you will kepp your api data models)
       - service (you will keep CRUD operations in here)
       - viewModel (your view controller. actually, we use getXController instead of this.)
@@ -203,25 +203,29 @@ VIEW: https://github.com/VB10/Flutter-Full-Learn/blob/main/lib/303/reqrest_resou
 
 In conclusion, in the statefulWidgets second class extends our viewModel.
 
-** you shouldn't create more than one htpp or dio object or whatever use. Go to this link:
+** you shouldn't create more than one HTTP or DIO object or whatever use. Go to this link:
 https://github.com/VB10/Flutter-Full-Learn/blob/main/lib/product/service/project_dio.dart
 
 ** NEVER USE any logic method in view file. if the code does not seem on the screen, don't use in view file.
 
-**The teacher only has created DIO object int here. After hat, he has called this object from here.
+**The teacher only has created DIO object in here. After that, he has called this object from here.
 ** use the extension for String,Int stateful structures. I mean, there is no problem to use with flutter ready structure.For Instance:
 https://github.com/VB10/Flutter-Full-Learn/blob/main/lib/product/extension/string_extension.dart
 
 in this link, the teacher has added new property to String class.From here on, if you wanna use the any string variable, you will be able to reach the colorValue. Be carefully the teacher has extended String with nullable property. So, we will be able to use for nullable string values like String? name. Now, name variable use the this property.
 
-** the teacher said that when you wanna create model file, if all values from postman body are not necessery , you can copy only data or necessary fields.
+** the teacher said that when you wanna create model file, if all values from postman body are not necessary, you can copy only data or necessary fields.
 
 ** if you use the stateManagement from outside, you don't have to use viewModel. Provider,Riverpod or Getx does instead of 
 viewModel.
 
 ** create an project and use the provider in state management folder.
-** jsonSerializeble,build_runner and json_annocation usage. THESE ARE SO IMPORTANT. SEARCH ON THE INTERNET
-jsonSerializable: it has createToJson property. it prevents the create toJson method.
+
+** jsonSerializeble/jsonDeserializeble, build_runner and json_annocation usage. THESE ARE SO IMPORTANT. SEARCH ON THE INTERNET
+jsonSerializable: it has createToJson property. it prevents the create toJson method. you should add build_runner to dev_dependency. dev_dependency is not working on app runtime. It's run-in only developing time.
+
+build_runner makes code generation liem artificial intelligent instead of developer.
+Go to VB 1:12:24 at 15 video and use on any project.
 
 @JsonSerializable(createToJson: false)
 
@@ -236,10 +240,13 @@ jsonSerializable: other property is filedRename. sometimes api keys are not case
 
  
  NOTES:
+** static values, you can keep static_values file under the static folder.
+** best practice api usage{https://www.youtube.com/watch?v=04j8jTJ7j8Q}
+** you can keep query parameters query_param file under the a network folder.
 ** create Global folder for general datas. don't use General.
-** MaterialApp title is text which when the app in the task manager, hambugerger menu on the device.
+** MaterialApp title is text which when the app in the task manager, hamburger menu on the device.
 ** in the flutter root folder, there is a readMe.md file. you can take notes in there.
-** you can use the appBundle instead of the apk building. appBundle has many advantages according to Apk.
+** you can use the appBundle instead of the APK building. appBundle has many advantages according to Apk.
 ** .sh Usage. 
 create a folder like commands. 
 create a file flutter_doctor.sh
