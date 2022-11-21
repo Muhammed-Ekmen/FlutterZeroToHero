@@ -8,7 +8,7 @@ Custom Theme Usage
 Never use ! operator. use the ?? operator instead of it.
 floatingActionButton location
 Custom Font Usage (download)
-BottomSheet Usage
+BottomNavigatorBar Usage
 ------------
 3rd adn 4th VIDEO 
 
