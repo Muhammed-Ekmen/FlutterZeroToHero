@@ -260,8 +260,56 @@ https://github.com/VB10/Flutter-Full-Learn/blob/main/lib/303/lottie_learn.dart
 
 ** Future.microtask usage.
 
-25 48
- 
+FutureTask structures are execute earlier than other Future or Timer structures. That means, when you need to run any code line before the other Future code lines you can use it.
+ Look at the below:
+----- 
+ void main() {
+  Future(() => print('future 1'));
+  Future(() => print('future 2'));
+  // Microtasks will be executed before futures.
+  Future.microtask(() => print('microtask 1'));
+  Future.microtask(() => print('microtask 2'));
+}
+-----
+
+when you run on the dartpad or etc. its output is in order:
+
+microtask 1
+microtask 2
+future 1
+future 2
+
+NOTE: Future.microtask can be alternative of whenComplete at the end of the any Future structure.
+
+** SINGLETON
+
+Basically, get single structres in common fields. For example: that is too much performance problem to use too many static variables. We have asked the that problem
+and we haven't gotton answer.NOW, we will. in the singleton structres, we reach the common variables with getter(get) property.
+surekli kullanilacak ve degismeyecek
+
+Some usage Defines: when you need to use regular and never change structres, you will be able to use singleton pattern. Remember the your values filter city,brand id etc.
+
+Main idea is ; there is only one instance, it shouldn't generate from any developer. It should generate only once.at the below,I will add the classic and singleton usage of network manager class.
+
+** some list tricky points,thjink about your project. you have a home page and campaing page. you was sending your campaing model to your campaign page. Actually, that usage
+is wrong. what can you do?
+first, create a list that keep campaing page like List<CampaignDetailPageCard> campaigns
+second, use the map with your data from API like List<CampaignDetailPage> campaigns=campaignItems.map((e)=>CampaignDetailPageCard(items:e)).toList(); 
+
+I mean, you keeps all campaign card in list. so, why shoudl we use that usage? Because when you give campaign in directly, when you change any part to model class, evrywhere
+will change.
+
+** some important list methods. use the lsit method instead of the for while if else structures.
+take(5) gievs you 5 items from list.
+map    you can use more than one map like exaList.map((e)=>e.toInt()).map((e)=>e.toString()).toList()
+shuffle it mixes the all items.
+asMap    it converts the list to Map type and its keys are index 0 to end,
+whereType it gives what you want type from that list. EXAMPLE{
+var mixList = [1, "a", 2, "b", 3, "c", 4, "d"];
+ var num = mixList.whereType<int>();
+ print(num); // (1, 2, 3, 4)
+}
+
  NOTES:
 ** keep your base url image path with extension and enum classes.{https://github.com/VB10/Flutter-Full-Learn/blob/main/lib/product/constant/lottie_items.dart}
 ** static values, you can keep static_values file under the static folder.
