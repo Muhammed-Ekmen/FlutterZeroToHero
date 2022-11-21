@@ -310,7 +310,95 @@ var mixList = [1, "a", 2, "b", 3, "c", 4, "d"];
  print(num); // (1, 2, 3, 4)
 }
 
+
+
+17th Video
+
+**NAVIGATOR OPERATIONS
+
+in the main.dart file, you can use routes and initialRoute parameters. But there is a effective way to use nagitors.
+
+Assume we have 3 pages and these are homeDetail,homeView and just profile. we will go to these pages with routes.
+check the this link:
+https://github.com/VB10/Flutter-Full-Learn/tree/main/lib/303/navigator
+
+
+if you remember emre teacher was going same way. create navigator class like navigator manager. we gonna do same things.
+https://github.com/VB10/Flutter-Full-Learn/blob/main/lib/product/navigator/navigator_custom.dart
+
+I have added this link because that is not class. it is mixin. So, we only extends oru UI class with this mixix structure and we will be able to use it.
+note: in this link the teacher has used the T. because he wanted to only valid for MyApp class.
+
+** there is a property of enum. it is byName
+-*-*-*-*-*-*-*-*-*
+void main() {
+
+  var result=Trial.values.byName("one");
+
+  switch (result){
+      case
+  }
+}
+
+
+enum Trial{
+  
+  one,
+  two,
+  three
+  
+}
+-*-*-*-*-*-*-*-*-*
+
+so, you can switch case structure will fill automaticlyy.
+
+** you can substring method from Strings. it separete the your string value. you can use it when you work on API base url etc.
+** YOU SHOULD START THE USE ACTIONMANAGER AGAIN. it was true. the teacher said like this. in this reason,you gotta improve usage. but there is a additional field. USE THE
+SINGLETON Strucure for ActionManger. Actually RouteManager.
+
+EMRE TEACHER EXAMPLE
+-*-*-*-*
+routerr dosyasi icin
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:owl/king.dart';
+import 'package:owl/main.dart';
+import 'package:owl/trial.dart';
+
+class RouterClass {
+  static Route<dynamic>? defineDevice(RouteSettings settings, Widget incoming) {
+    if (defaultTargetPlatform == TargetPlatform.iOS) {
+      return CupertinoPageRoute(
+          settings: settings, builder: (BuildContext context) => incoming);
+    } else {
+      return MaterialPageRoute(
+          settings: settings, builder: (BuildContext context) => incoming);
+    }
+  }
+
+  static Route<dynamic>? routerMethod(RouteSettings settings) {
+    switch (settings.name) {
+      case "/TrialPage":
+        return defineDevice(settings, TrialPage());
+      case "/":
+        return defineDevice(settings, Launcher());
+      default:
+        return defineDevice(settings, ErrorPage());
+    }
+  }
+}
+-*-*-*-*
+
+
+1:02:00 on Mobx and ImagePicker
+
+note: get.offNamed equels to Navigator.pushReplacementNamed
+
+===========================================================================================================================================
  NOTES:
+** if you can don't keep data from API to any variable, direct use the related page. For example FutureBuilder.
 ** keep your base url image path with extension and enum classes.{https://github.com/VB10/Flutter-Full-Learn/blob/main/lib/product/constant/lottie_items.dart}
 ** static values, you can keep static_values file under the static folder.
 ** best practice api usage{https://www.youtube.com/watch?v=04j8jTJ7j8Q}
