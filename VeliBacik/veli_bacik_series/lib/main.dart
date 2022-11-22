@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:veli_bacik_series/101/theme/theme_constants.dart';
 import 'package:veli_bacik_series/101/ui/view101.dart';
 
 void main(List<String> args) {
@@ -10,8 +12,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: OneHundredOne(),
+    return GetMaterialApp(
+      theme: CustomThemes.instance.lightTheme,
+      darkTheme: CustomThemes.instance.darkTheme,
+      debugShowCheckedModeBanner: false,
+      home: const OneHundredOne(),
     );
   }
 }
