@@ -22,7 +22,7 @@ padding values in other dart file.
 
 Spacer Usage with expanded
 stack usage according to responsive design
-CustomScrool view
+CustomScrool view(SLIVERS)
 life cycles
 textFormField with animetedContainer
 pageview with scaffolds
