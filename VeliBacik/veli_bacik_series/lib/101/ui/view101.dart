@@ -1,10 +1,11 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:veli_bacik_series/101/components/appbar/custom_appbar.dart';
 import 'package:veli_bacik_series/101/components/button/custom_button.dart';
 import 'package:veli_bacik_series/101/components/textFormField/custom_tff.dart';
+import 'package:veli_bacik_series/101/ui/Slivers/slivers_view.dart';
+import 'package:veli_bacik_series/101/ui/debug_view.dart';
 import '../utils/enums101.dart';
 
 class OneHundredOne extends StatefulWidget {
@@ -18,9 +19,8 @@ class _OneHundredOneState extends State<OneHundredOne> {
   late String name;
   @override
   void initState() {
-    debugPrint("init State");
-    name="Sam";
-    log(" name value $name",name: "NAME");
+    name = "Sam";
+    log(" name value $name", name: "NAME");
     super.initState();
   }
 
@@ -50,12 +50,22 @@ class _OneHundredOneState extends State<OneHundredOne> {
   _body(BuildContext context) {
     return Column(
       children: [
-        Text(
-          "101 Course $name",
-          style: Theme.of(context).textTheme.bodyText1,
-          textScaleFactor: 2,
+        FittedBox(child: Text("101 Course $name", style: Theme.of(context).textTheme.bodyText1, textScaleFactor: 2)),
+        FittedBox(
+          child: Row(
+            children: List.generate(25, (index) => Text("asd$index")).toList(),
+          ),
         ),
-        const CustomButton(),
+        CustomButton(
+          title: "DebugView",
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const DebugView()));
+          },
+        ),
+        CustomButton(
+          title: "Slivers Examples",
+          onPressed: () => Get.to(() => const SliversExaView()),
+        ),
         const SizedBox(height: 20),
         Stack(
           //aligment for stack children
@@ -117,10 +127,13 @@ the stack, you will wants to different position front components. Remember the W
 SLIVERS
 CustomScrollView. 
 SliverFillRemaining: it will active scroll property when layouts doesn't fill the screen.
+SliverGrid
+SliverList
+SliverToBoxAdapter: when you use the CustomScroolView, you have to only use sliver widgets. but if you need to other widgets you shoudl wrap with SliverToBoxAdapter.
+
+NestedScroolView: you should only use sliverAppBar. Otherwise, you shoudl use the CustomScroolview.
 ---
-NestedScroolView
----
-LifeCycle
+LIFECYCLE
 
 initState: in here, screen doesn't create yet.Definition: before the screen draw, initialize the state this method run.
 
@@ -128,16 +141,20 @@ didChangeDependencies: in here screen create yet. when state has update, this fi
 Definition: when the state update,this method will run.
 
 dispose: when you leave the current state. For example go to other page with button.
-
 ---
 TextFormField with AnimatedContainer. For more detail go to CustomTextFormField.
 ----
 Debug usage.
-firstly,you shoudl use log instad of the debugPrint. it has more features. But it must comes from dart:Developer import
-for more go to the debugView Page.
+go to debug view screen.
 ----
 textScaleFactor: that is percent enlarge or make smaller to text. 1 is its default text size. if you give 2 that is double size.
 ---
-late Usage: the late variables wait until initilaize the constructor. for example look at the name variable at the aboive and we have used on the
-appbar text. if wouldn't give value in the init method, app would crash.
+late Usage: the late variables wait until initilaize the constructor. for example look at the name variable at the aboive and we have used
+on the appbar text. if wouldn't give value in the init method, app would crash.
+---
+FittedBox 
+ 
+we have used with Text and listGenerate. That widget keep child and set up layout and positoned by itself.
+----
+
 */
