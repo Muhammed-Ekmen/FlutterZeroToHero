@@ -88,7 +88,38 @@ NETWORK
 
 *in here, you can check the your app request,endpoint and taken parameters. Sometimes backend can be problem. Inthis reason you need to check.
 
+for example: in the APi example screen, we have used the some CRUD operations.
+open the network from DevTools.
 
+as you can see , there are many Uri adresses. when you click the any uri adress:
+ under the overview sections, you can see some prooperties. The most importants are:
+request uri:
+Method:
+contentType; json or website
+
+under the Header Section:
+
+isRedirect: does this link send you to another page or source?
+
+ResponseHeader: things that we have taken on device
+
+
+RequestHeader: things that we have send from device
+user-agent: that is information that who we are.
+
+THE MOST BEAUTIFUL FIELD::::
+go to the Response section and you can see the what did come from Service like Postman?
+
+
+PERFORMANCE FROM DEVTOOL
+
+when you go to the performnace from devtool, you will encounter the an chart. that is ms info of your app rendering. the key point is your app ms(milisecond)
+should be under the 17. Vice verca situations, it will be over the 60 frame and that is not good.
+
+IN short, you can check FPS info from here.
+
+
+WIDGET INSPECTOR
 
 
 

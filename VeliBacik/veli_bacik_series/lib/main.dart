@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:veli_bacik_series/101/theme/theme_constants.dart';
-import 'package:veli_bacik_series/101/ui/view101.dart';
 import 'package:get/get.dart';
+import 'package:veli_bacik_series/101/ui/view101.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -46,8 +46,6 @@ class MyApp extends StatelessWidget {
 //     }
 //   }
 // }
-
-
 
 // import 'package:servislettt/source/constants/app_texts.dart';
 
@@ -94,5 +92,4 @@ class MyApp extends StatelessWidget {
 // }
 
 //Controller
-  // fetchBrands() => ServiceOfWheelBrands.getWheelBrands().then((value) => brands.value = value?.data?.brands ?? []).whenComplete(() => LoadingChecker.changeSituation());
-
+// fetchBrands() => ServiceOfWheelBrands.getWheelBrands().then((value) => brands.value = value?.data?.brands ?? []).whenComplete(() => LoadingChecker.changeSituation());

@@ -5,6 +5,7 @@ import 'package:veli_bacik_series/101/components/appbar/custom_appbar.dart';
 import 'package:veli_bacik_series/101/components/button/custom_button.dart';
 import 'package:veli_bacik_series/101/components/textFormField/custom_tff.dart';
 import 'package:veli_bacik_series/101/ui/Slivers/slivers_view.dart';
+import 'package:veli_bacik_series/101/ui/ApiExample/view/api_exa.dart';
 import 'package:veli_bacik_series/101/ui/debug_view.dart';
 import '../utils/enums101.dart';
 
@@ -66,6 +67,7 @@ class _OneHundredOneState extends State<OneHundredOne> {
           title: "Slivers Examples",
           onPressed: () => Get.to(() => const SliversExaView()),
         ),
+        CustomButton(title: "Api Exa Screen", onPressed: () => Get.to(ApiExaView())),
         const SizedBox(height: 20),
         Stack(
           //aligment for stack children
@@ -153,7 +155,6 @@ late Usage: the late variables wait until initilaize the constructor. for exampl
 on the appbar text. if wouldn't give value in the init method, app would crash.
 ---
 FittedBox 
- 
 we have used with Text and listGenerate. That widget keep child and set up layout and positoned by itself.
 ----
 

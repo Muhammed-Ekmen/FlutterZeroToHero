@@ -10,25 +10,36 @@ class CustomScroolViewUsage extends StatelessWidget {
       body: const CustomScrollView(
         slivers: [
           // _sliverListUsage(),
-          // _sliverGridUsage()
+          // _sliverGridUsage(),
+          // _sliverBoxAdapter(),
         ],
+      ),
+    );
+  }
+
+  SliverToBoxAdapter _sliverBoxAdapter() {
+    return SliverToBoxAdapter(
+      child: Container(
+        width: 150,
+        height: 150,
+        color: Colors.red,
       ),
     );
   }
 
   SliverGrid _sliverGridUsage() {
     return SliverGrid(
-          delegate: SliverChildBuilderDelegate(
-            (context, index) {
-              return Padding(
-                padding: const EdgeInsets.all(10),
-                child: Material(color: Colors.purple, child: ListTile(title: Text("index $index"))),
-              );
-            },
-            childCount: 10,
-          ),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-        );
+      delegate: SliverChildBuilderDelegate(
+        (context, index) {
+          return Padding(
+            padding: const EdgeInsets.all(10),
+            child: Material(color: Colors.purple, child: ListTile(title: Text("index $index"))),
+          );
+        },
+        childCount: 10,
+      ),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+    );
   }
 
   SliverList _sliverListUsage() {
