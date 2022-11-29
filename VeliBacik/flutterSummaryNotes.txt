@@ -407,6 +407,25 @@ note: get.offNamed equels to Navigator.pushReplacementNamed
 ** MaterialApp title is text which when the app in the task manager, hamburger menu on the device.
 ** in the flutter root folder, there is a readMe.md file. you can take notes in there.
 ** you can use the appBundle instead of the APK building. appBundle has many advantages according to Apk.
+** create LoadingOverlay class for loading checker like {
+import 'package:flutter/material.dart';
+
+class LoadingOverlay extends StatelessWidget {
+  final Widget child;
+  final bool isLoading;
+
+  const LoadingOverlay({Key key, this.isLoading, @required this.child})
+      : assert(child != null),
+        super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    if (isLoading) {
+      return Center(child: CircularProgressIndicator());
+    }
+    return child;
+  }
+}
+}
 ** .sh Usage. 
 create a folder like commands. 
 create a file flutter_doctor.sh
