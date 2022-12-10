@@ -8,9 +8,13 @@ class ServiceOfPosts {
   static Future<List<ModelOfPosts>> getPosts() async {
     try {
       http.Response? response = await AppBaseRequests.getRequest(path: "https://jsonplaceholder.typicode.com/posts");
-      List responseBody = jsonDecode(response?.body ?? "");
-      List<ModelOfPosts> posts = responseBody.map((e) => ModelOfPosts.fromJson(e)).toList();
-      return posts;
+      if (response?.body != null) {
+        List responseBody = jsonDecode(response?.body ?? "");
+        List<ModelOfPosts> posts = responseBody.map((e) => ModelOfPosts.fromJson(e)).toList();
+        return posts;
+      } else {
+        return [];
+      }
     } catch (e) {
       return Future.error(e);
     }

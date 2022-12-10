@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:veli_bacik_series/101/theme/theme_constants.dart';
 import 'package:get/get.dart';
-import 'package:veli_bacik_series/101/ui/view101.dart';
+import 'package:veli_bacik_series/202/ui/apiExaWithDio/view/dio_exa.dart';
+import 'package:veli_bacik_series/202/ui/view202.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -16,10 +17,22 @@ class MyApp extends StatelessWidget {
       theme: CustomThemes.instance.lightTheme,
       darkTheme: CustomThemes.instance.darkTheme,
       debugShowCheckedModeBanner: false,
-      home: const OneHundredOne(),
+      home: const TwoHundredTwo(),
     );
   }
 }
+
+
+// fetch comment get request has worked
+// [API] service has worked
+// [API] dio client get request has worked
+// [API] dio response processor has worked
+// [API] service .then has worked
+// [API] service else has worked
+// [API] fetch inside has worked
+
+
+
 
 // import 'package:http/http.dart' as http;
 // import 'package:servislettt/source/service/service_exceptions.dart';

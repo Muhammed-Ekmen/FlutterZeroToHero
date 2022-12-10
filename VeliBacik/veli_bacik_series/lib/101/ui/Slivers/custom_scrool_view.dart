@@ -7,11 +7,11 @@ class CustomScroolViewUsage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("CustomScroolView Usage")),
-      body: const CustomScrollView(
+      body: CustomScrollView(
         slivers: [
-          // _sliverListUsage(),
-          // _sliverGridUsage(),
-          // _sliverBoxAdapter(),
+          _sliverListUsage(),
+          _sliverGridUsage(),
+          _sliverBoxAdapter(),
         ],
       ),
     );
